@@ -36,7 +36,9 @@ In the development of Vega-Lite follows, we follow these principles that we have
 
 ## Looking for a Task to Contribute
 
-You can find [tasks with the "Good first issue" label in the issue tracker :pray:](https://github.com/vega/vega-lite/labels/Good%20first%20issue%20%3Ababy%3A). Please add a comment in issues if you are planning to work on a major task.
+You can find [tasks with the "Help Wanted" label in the issue tracker :pray:](https://github.com/vega/vega-lite/labels/Help%20Wanted). Please add a comment in issues if you are planning to work on a major task.
+
+If this is your first contribution, consider [submitting an example](https://github.com/vega/vega-lite/issues/1486) as described in the [examples section](#examples).
 
 ## Documentation and Website
 
@@ -94,7 +96,7 @@ After you push a new branch to GitHub, the CI will automatically run `yarn build
 
 ## Repository Setup
 
-1. Make sure you have [node.js](https://nodejs.org/en/). For mac users, we recommend using [homebrew](http://brew.sh) and simply run:
+1. Make sure you have [node.js](https://nodejs.org/en/) (>= 16.0). You can check if you already have node installed by running `node -v`. For mac users, if you do not have node installed, we recommend using [homebrew](http://brew.sh) and simply run:
 
 ```sh
 brew install node
@@ -118,11 +120,21 @@ For ruby, Mac users can use [homebrew](http://brew.sh) to add it:
 brew install ruby
 ```
 
+Because Macs already come with Ruby installed, you'll also likely need to append the brew Ruby to your path variable:
+
+```sh
+echo 'export PATH="/opt/homebrew/opt/ruby/bin:$PATH"' >> ~/.zshrc
+```
+
+And then restarting your terminal in order to set the path. To confirm Ruby was installed correctly you can run `ruby -v` and you should see `ruby 3.2.2` (or the version you installed).
+
 For bundler:
 
 ```sh
 gem install bundler
 ```
+
+If you see an error related to write permissions on the gems directory, you can run the install command with the `--user-install` option and append `~/.gem/ruby/<ruby version>/bin` to your `$PATH`. For more information and troubleshooting steps, view the [bundler documentation](https://bundler.io/doc/troubleshooting.html).
 
 Or to install the same version that was used to create the bundle:
 
